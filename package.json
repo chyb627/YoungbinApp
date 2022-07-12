@@ -1,0 +1,51 @@
+{
+  "name": "YoungbinApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "aos": "npx react-native run-android",
+    "ios": "npx react-native run-ios",
+    "ios:debug": "npx react-native run-ios --device",
+    "ios:staging": "npx react-native run-ios --configuration Staging",
+    "aos:debug": "npx react-native run-android --variant=debug --appId com.brick.woorigg.debug",
+    "aos:staging": "npx react-native run-android --variant=releaseStaging",
+    "ios:release": "npx react-native run-ios --configuration Release",
+    "aos:release": "npx react-native run-android --variant=release",
+    "aos:clean": "cd android && ./gradlew clean && cd ..",
+    "ios:clean": "cd ios && rm -rf Pods && pod cache clean --all && pod install && cd ..",
+    "start": "npx react-native start --reset-cache",
+    "test": "jest",
+    "info": "npx react-native info",
+    "lint": "eslint .",
+    "pod": "cd ios && pod install && cd ..",
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
+    "android:staging": "cd ./android && ./gradlew app:assembleReleaseStaging",
+    "android:release": "cd ./android && ./gradlew app:assembleRelease",
+    "postinstall": "touch ./.metadata_never_index",
+    "aos:icon": "npx react-native set-icon --platform android --path src/assets/images/thepay_icon_aos.png",
+    "ios:icon": "npx react-native set-icon --platform ios --path src/assets/images/thepay_icon_ios.png",
+    "splash": "npx react-native set-splash --path ./src/assets/images/thepay_icon_aos.png --resize contain --background \"white\"",
+    "aos:cp": "appcenter codepush release-react -a brick.emo/woorigg-aos",
+    "ios:cp": "appcenter codepush release-react -a brick.emo/woorigg-ios",
+    "rstart": "npx react-native start --reset-cache",
+    "storybook": "start-storybook -p 7007",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-native": "0.68.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.67.0",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
