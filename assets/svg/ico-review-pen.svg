@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="54px" viewBox="0 0 56 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>border_color</title>
+    <g id="우리카드" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="샘플" transform="translate(-220.000000, -2100.000000)">
+            <g id="contents" transform="translate(0.000000, 1846.000000)">
+                <g id="전체리뷰/미답변" transform="translate(64.000000, 184.000000)">
+                    <g id="전체리뷰" transform="translate(156.000000, 68.000000)">
+                        <g id="Outlined-/-Editor-/-border_color" transform="translate(0.000000, 1.680000)">
+                            <polygon id="Path" points="0 0.56 56 0.56 56 54.32 0 54.32"></polygon>
+                            <path d="M32.6666667,7.84 L9.33333333,30.24 L9.33333333,38.64 L18.0833333,38.64 L41.4166667,16.24 L32.6666667,7.84 Z M16.1466667,34.16 L14,34.16 L14,32.0992 L32.6666667,14.1792 L34.8133333,16.24 L16.1466667,34.16 Z M48.3233333,9.6096 C49.2333333,8.736 49.2333333,7.3248 48.3233333,6.4512 L42.8633333,1.2096 C41.9533333,0.336 40.4833333,0.336 39.5733333,1.2096 L35,5.6 L43.75,14 L48.3233333,9.6096 Z" id="🔹-Primary-Color" fill="#1D1D1D"></path>
+                            <polygon id="🔹-Secondary-Color" fill="#D0D0D0" points="0 45.36 56 45.36 56 54.32 0 54.32"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

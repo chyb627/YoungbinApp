@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#262626;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.4px}
+        </style>
+    </defs>
+    <g id="ico_direct" transform="translate(-36 -259)">
+        <circle id="타원_14" data-name="타원 14" cx="28.5" cy="28.5" r="28.5" transform="translate(36 259)" style="fill:#f7f7f7"/>
+        <g id="그룹_68" data-name="그룹 68" transform="translate(48.612 276.727)">
+            <path id="패스_114" data-name="패스 114" class="cls-2" d="M13.729 19.282v.927a.927.927 0 0 1-.927.928H1.678a.928.928 0 0 1-.928-.928v-.942c0-2.8 3.206-4.628 6.49-4.628s6.489 1.824 6.489 4.628" transform="translate(.019 .368)"/>
+            <circle id="타원_12" data-name="타원 12" class="cls-2" cx="3.237" cy="3.237" r="3.237" transform="translate(4.021 5.743)"/>
+            <path id="패스_115" data-name="패스 115" class="cls-2" d="M30.48 14.43v.927a.928.928 0 0 1-.928.928H18.428a.928.928 0 0 1-.928-.928v-.942c0-2.8 3.207-4.628 6.489-4.628s6.491 1.824 6.491 4.628" transform="translate(1.44 -.754)"/>
+            <circle id="타원_13" data-name="타원 13" class="cls-2" cx="3.237" cy="3.237" r="3.237" transform="translate(22.192 -.231)"/>
+            <path id="선_35" data-name="선 35" class="cls-2" transform="translate(13.65 2.624)" d="M3.709 0H0"/>
+            <path id="선_36" data-name="선 36" class="cls-2" transform="translate(13.65 2.623)" d="M1.854 1.854 0 0"/>
+            <path id="선_37" data-name="선 37" class="cls-2" transform="translate(13.65 .769)" d="M1.854 0 0 1.854"/>
+            <path id="선_38" data-name="선 38" class="cls-2" transform="translate(13.651 8.986)" d="M0 0h3.709"/>
+            <path id="선_39" data-name="선 39" class="cls-2" transform="translate(15.505 7.132)" d="m0 0 1.854 1.854"/>
+            <path id="선_40" data-name="선 40" class="cls-2" transform="translate(15.505 8.986)" d="M0 1.854 1.854 0"/>
+        </g>
+    </g>
+</svg>

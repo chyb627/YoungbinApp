@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:#0f0f0f}
+        </style>
+    </defs>
+    <g id="btn_close" transform="translate(-321 -375)">
+        <rect id="사각형_53" data-name="사각형 53" class="cls-2" width="18" height="2" rx="1" transform="rotate(45 -294.994 585.224)"/>
+        <rect id="사각형_54" data-name="사각형 54" class="cls-2" width="18" height="2" rx="1" transform="rotate(135 91.078 261.153)"/>
+    </g>
+</svg>

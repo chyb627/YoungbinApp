@@ -1,0 +1,9 @@
+<svg id="btn_more" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#0f0f0f;stroke-linecap:round}
+        </style>
+    </defs>
+    <path id="패스_17" data-name="패스 17" class="cls-2" d="m1073 352.714 4.571 4.571" transform="translate(-1066 -348)"/>
+    <path id="패스_18" data-name="패스 18" class="cls-2" d="m1073 352.714 4.571 4.571" transform="rotate(-90 370.572 716.285)"/>
+</svg>

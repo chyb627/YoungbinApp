@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="사각형_10" data-name="사각형 10" class="cls-1" d="M0 0h18v20.431H0z"/>
+        </clipPath>
+        <style>
+            .cls-1{fill:#222}
+        </style>
+    </defs>
+    <g id="ico_id" transform="translate(.63 2.5)">
+        <g id="그룹_4" data-name="그룹 4" transform="translate(2.37 -.5)" style="clip-path:url(#clip-path)">
+            <path id="패스_6" data-name="패스 6" class="cls-1" d="M26.182 13.24a6.62 6.62 0 1 1 6.62-6.62 6.628 6.628 0 0 1-6.62 6.62m0-11.173a4.552 4.552 0 1 0 4.553 4.552 4.558 4.558 0 0 0-4.553-4.552" transform="translate(-17.182 .001)"/>
+            <path id="패스_7" data-name="패스 7" class="cls-1" d="M1.034 97.015A1.034 1.034 0 0 1 0 95.981a9.655 9.655 0 0 1 5.507-8.691 1.034 1.034 0 0 1 .883 1.87 7.579 7.579 0 0 0-4.323 6.822 1.034 1.034 0 0 1-1.034 1.034" transform="translate(0 -76.584)"/>
+            <path id="패스_8" data-name="패스 8" class="cls-1" d="M96.512 97.012a1.034 1.034 0 0 1-1.034-1.034 7.578 7.578 0 0 0-4.323-6.822 1.034 1.034 0 1 1 .883-1.87 9.655 9.655 0 0 1 5.508 8.692 1.034 1.034 0 0 1-1.034 1.034" transform="translate(-79.546 -76.582)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>타이틀</title>
+    
+        <g id="" transform="translate(-1364.000000, -252.000000)">
+            <g id="" transform="translate(1364.000000, 252.000000)">
+                <rect id="" fill="#000000" x="0" y="9" width="72" height="4" rx="2"></rect>
+                <rect id="" fill="#000000" x="0" y="34" width="72" height="4" rx="2"></rect>
+                <rect id="" fill="#000000" x="0" y="59" width="72" height="4" rx="2"></rect>
+                <circle id="" stroke="#0F0F0F" stroke-width="4" fill="#FFFFFF" cx="19" cy="11" r="7"></circle>
+                <circle id="" stroke="#0F0F0F" stroke-width="4" fill="#FFFFFF" cx="25" cy="61" r="7"></circle>
+                <circle id="" stroke="#0F0F0F" stroke-width="4" fill="#FFFFFF" cx="53" cy="36" r="7"></circle>
+            </g>
+        </g>
+
+</svg>

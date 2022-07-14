@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#444;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6px}.cls-2{fill:#444}
+        </style>
+    </defs>
+    <g id="ico_fin_cash_off" transform="translate(11.565 8)">
+        <g id="그룹_50" data-name="그룹 50">
+            <path id="패스_73" data-name="패스 73" class="cls-1" d="M1.976 12.308V6.4h11.4v5.9" transform="translate(-5 .07)"/>
+            <path id="패스_74" data-name="패스 74" class="cls-1" d="M3.31 6.4h11.95V.5H3.452v5.9" transform="translate(-5)"/>
+            <path id="패스_75" data-name="패스 75" class="cls-1" d="M1.976 18.212v5.946H13.31" transform="translate(-5 .217)"/>
+            <path id="패스_76" data-name="패스 76" class="cls-1" d="M13.248 12.308H.5v5.974h10.56" transform="translate(-5 .07)"/>
+            <path id="패스_77" data-name="패스 77" class="cls-1" d="M17.646 24.729a6.642 6.642 0 1 1 6.641-6.641 6.641 6.641 0 0 1-6.641 6.641" transform="translate(-1.787 .217)"/>
+            <path id="선_17" data-name="선 17" class="cls-1" transform="translate(13.487 15.932)" d="M0 4.649 4.649 0"/>
+            <path id="패스_81" data-name="패스 81" class="cls-2" d="M17.076 15.416a.9.9 0 1 1 0 1.274.9.9 0 0 1 0-1.274z" transform="translate(-4.041 -.474)"/>
+            <path id="패스_82" data-name="패스 82" class="cls-2" d="M17.076 15.416a.9.9 0 1 1 0 1.274.9.9 0 0 1 0-1.274z" transform="translate(.684 4.22)"/>
+        </g>
+    </g>
+</svg>

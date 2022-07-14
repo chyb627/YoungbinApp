@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Outlined / Notification / priority_high</title>
+    <g id="우리카드" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.7">
+        <g id="1_대시보드_1-1_템플릿" transform="translate(-432.000000, -4668.000000)">
+            <g id="list1-copy-3" transform="translate(64.000000, 4536.000000)">
+                <g id="Outlined-/-Notification-/-priority_high" transform="translate(368.000000, 132.000000)">
+                    <polygon id="Path" points="13.2682927 13.2682927 50.7317073 13.2682927 50.7317073 50.7317073 13.2682927 50.7317073"></polygon>
+                    <circle id="Oval" stroke="#000000" stroke-width="8" cx="32" cy="32" r="28"></circle>
+                    <path d="M32,46.0487805 C30.275794,46.0487805 28.8780488,44.6510353 28.8780488,42.9268293 C28.8780488,41.2026232 30.275794,39.804878 32,39.804878 C33.724206,39.804878 35.1219512,41.2026232 35.1219512,42.9268293 C35.1219512,44.6510353 33.724206,46.0487805 32,46.0487805 Z M28.8780488,17.9512195 L35.1219512,17.9512195 L35.1219512,36.6829268 L28.8780488,36.6829268 L28.8780488,17.9512195 Z" id="🔹-Icon-Color" fill="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

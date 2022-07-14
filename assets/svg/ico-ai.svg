@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="사각형_36" data-name="사각형 36" style="fill:none;stroke:#3194f7;stroke-width:2px" d="M0 0h33v35.298H0z"/>
+        </clipPath>
+        <style>
+            .cls-4{fill:none;stroke:#3194f7;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="ico_ai" transform="translate(8 12)">
+        <circle id="타원_2" data-name="타원 2" cx="10" cy="10" r="10" transform="translate(-6 6)" style="fill:#e7f7f4"/>
+        <g id="그룹_18" data-name="그룹 18" transform="translate(3.949)">
+            <path id="선_5" data-name="선 5" class="cls-4" transform="translate(4.739 17.165)" d="M0 0h7"/>
+            <path id="선_6" data-name="선 6" class="cls-4" transform="translate(4.045 21.368)" d="M0 0h14.82"/>
+            <g id="그룹_17" data-name="그룹 17">
+                <g id="그룹_16" data-name="그룹 16" style="clip-path:url(#clip-path)">
+                    <rect id="사각형_35" data-name="사각형 35" class="cls-4" width="11.91" height="7.006" rx="3" transform="translate(20.038 1.051)"/>
+                    <path id="선_7" data-name="선 7" class="cls-4" transform="translate(7.003 34.247)" d="M0 0h18.422"/>
+                    <path id="패스_44" data-name="패스 44" d="M16.281 4.018H5.833A4.333 4.333 0 0 0 1.5 8.351v16.9a4.332 4.332 0 0 0 4.333 4.332h21.661a4.331 4.331 0 0 0 4.331-4.332V12.1" transform="translate(-.449 -1.203)" style="stroke-linejoin:round;fill:none;stroke:#3194f7;stroke-width:2px"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

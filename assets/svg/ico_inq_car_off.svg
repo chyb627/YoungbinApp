@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#444;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6px}
+        </style>
+    </defs>
+    <g id="ico_inq_car_off" transform="translate(4 7)">
+        <g id="그룹_49" data-name="그룹 49" transform="translate(.5 1.5)">
+            <path id="패스_56" data-name="패스 56" class="cls-2" d="M5.832 18.5v2A1.333 1.333 0 0 1 4.5 21.83H1.833A1.332 1.332 0 0 1 .5 20.5v-2" transform="translate(-.5 .42)"/>
+            <path id="패스_57" data-name="패스 57" class="cls-2" d="M14.384 18.5H.5v-6.345a4 4 0 0 1 1.172-2.828l1.494-1.495H22.95l.659.66" transform="translate(-.5 .068)"/>
+            <path id="선_9" data-name="선 9" class="cls-2" transform="translate(0 13.189)" d="M3.999.333 0 0"/>
+            <path id="패스_58" data-name="패스 58" class="cls-2" d="M7.166 18.37 8.5 14.5h5.978" transform="translate(-.136 .194)"/>
+            <path id="선_10" data-name="선 10" class="cls-2" transform="translate(23.626 6.251)" d="M2.666 0 0 .667"/>
+            <path id="선_11" data-name="선 11" class="cls-2" transform="translate(0 6.251)" d="M2.666.667 0 0"/>
+            <path id="패스_59" data-name="패스 59" class="cls-2" d="M3.166 7.832v-.675L4.28 2.975A3.332 3.332 0 0 1 7.5.5h11.23a3.332 3.332 0 0 1 3.241 2.56l.977 4.1v.675" transform="translate(-.5 -.5)"/>
+            <path id="패스_60" data-name="패스 60" class="cls-2" d="M23.5 16.909a.219.219 0 1 1-.31 0 .218.218 0 0 1 .31 0" transform="translate(.438 .18)"/>
+            <path id="패스_61" data-name="패스 61" class="cls-2" d="M26.617 16.909a.219.219 0 1 1-.31 0 .218.218 0 0 1 .31 0" transform="translate(.676 .18)"/>
+            <path id="패스_62" data-name="패스 62" class="cls-2" d="M20.391 16.909a.219.219 0 1 1-.31 0 .218.218 0 0 1 .31 0" transform="translate(.309 .18)"/>
+            <path id="패스_63" data-name="패스 63" class="cls-2" d="M17.679 19.983a5.758 5.758 0 0 1-.8-2.919 6.1 6.1 0 0 1 6.221-5.975 6.1 6.1 0 0 1 6.22 5.975 6.1 6.1 0 0 1-6.22 5.976 6.376 6.376 0 0 1-3.038-.765l-3.183.765z" transform="translate(.676 .42)"/>
+        </g>
+    </g>
+</svg>

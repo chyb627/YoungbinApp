@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#444;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6px}.cls-3{fill:#444}
+        </style>
+    </defs>
+    <g id="ico_fin_card_off" transform="translate(7 11)">
+        <path id="패스_69" data-name="패스 69" class="cls-2" d="M19.424 24.409a6.642 6.642 0 1 1 6.641-6.641 6.641 6.641 0 0 1-6.641 6.641" transform="translate(3.435 -2.992)"/>
+        <path id="선_15" data-name="선 15" class="cls-2" transform="translate(20.445 12.36)" d="M0 4.649 4.649 0"/>
+        <path id="선_16" data-name="선 16" class="cls-2" transform="translate(-.5 4.703)" d="M0 0h24.672"/>
+        <path id="패스_70" data-name="패스 70" class="cls-2" d="M25.172 6.594v-3.4A2.7 2.7 0 0 0 22.467.5H3.2A2.7 2.7 0 0 0 .5 3.194v12.121a2.7 2.7 0 0 0 2.7 2.694h10.363" transform="translate(-1 -1)"/>
+        <path id="패스_72" data-name="패스 72" class="cls-3" d="M17.076 15.416a.9.9 0 1 1 0 1.274.9.9 0 0 1 0-1.274z" transform="translate(2.733 -3.692)"/>
+        <path id="패스_80" data-name="패스 80" class="cls-3" d="M17.076 15.416a.9.9 0 1 1 0 1.274.9.9 0 0 1 0-1.274z" transform="translate(7.472 1.048)"/>
+    </g>
+</svg>

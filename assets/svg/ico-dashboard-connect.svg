@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="56px" viewBox="0 0 40 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 7</title>
+    <defs>
+        <polygon id="path-1" points="4.71698113e-06 0.00524816176 39.9584434 0.00524816176 39.9584434 24.9754687 4.71698113e-06 24.9754687"></polygon>
+        <polygon id="path-3" points="0 0.0297840074 39.9584434 0.0297840074 39.9584434 25 0 25"></polygon>
+    </defs>
+    <g id="우리카드" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1_대시보드_1-1_템플릿" transform="translate(-557.000000, -3622.000000)">
+            <g id="+" transform="translate(64.000000, 810.000000)">
+                <g id="추가" transform="translate(80.000000, 312.000000)">
+                    <g id="연동하기" transform="translate(0.000000, 2228.000000)">
+                        <g id="&gt;" transform="translate(64.000000, 220.000000)">
+                            <g id="Group-8" transform="translate(349.000000, 48.000000)">
+                                <g id="Group-7" transform="translate(0.000000, 4.000000)">
+                                    <g id="Group-3">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <g id="Clip-2"></g>
+                                        <path d="M39.9584481,16.4777665 L28.2841557,0.00524816176 L26.2534009,8.04513787 C6.70807075,4.03617647 0.0467028302,24.8265717 4.71698113e-06,24.9748254 C0.0948160377,24.8557537 8.59396698,14.2447702 23.8056179,17.7359007 L21.9779764,24.9715625 L21.9773632,24.9754687 L39.9584481,16.4777665 Z" id="Fill-1" fill="#2B64CF" mask="url(#mask-2)"></path>
+                                    </g>
+                                    <g id="Group-6" transform="translate(0.000000, 31.000000)">
+                                        <mask id="mask-4" fill="white">
+                                            <use xlink:href="#path-3"></use>
+                                        </mask>
+                                        <g id="Clip-5"></g>
+                                        <path d="M0,8.52748621 L11.6742925,25.0000046 L13.705,16.9601149 C33.2503302,20.9690763 39.9117453,0.178681066 39.9584434,0.0304733456 C39.8635849,0.149499081 31.3645283,10.7604825 16.152783,7.26939798 L17.9805189,0.0337362132 L17.9811321,0.0297840074 L0,8.52748621 Z" id="Fill-4" fill="#2B64CF" mask="url(#mask-4)"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

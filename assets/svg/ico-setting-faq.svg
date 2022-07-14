@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="91px" viewBox="0 0 65 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>notifications_active</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 107 80 107 80 0 0 0"></polygon>
+    </defs>
+    <g id="06-설정" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="6_설정_1_" transform="translate(-78.000000, -946.000000)">
+            <g id="배달의민족-copy" transform="translate(0.000000, 880.000000)">
+                <g id="notifications_active" transform="translate(64.000000, 59.000000)">
+                    <g id="Outlined-/-Social-/-notifications_active">
+                        <polygon id="Path" fill="#D8D8D8" opacity="0" points="0 5 96 5 96 101 0 101"></polygon>
+                        <g id="Group-14" transform="translate(6.000000, 0.000000)">
+                            <path d="M59,38.5 C59,48.7171243 50.7171243,57 40.5,57 C30.2828757,57 22,48.7171243 22,38.5 C22,28.2828757 30.2828757,20 40.5,20 C50.7171243,20 59,28.2828757 59,38.5" id="Fill-1" fill="#FFFFFF"></path>
+                            <path d="M59,38.5 C59,48.7171243 50.7171243,57 40.5,57 C30.2828757,57 22,48.7171243 22,38.5 C22,28.2828757 30.2828757,20 40.5,20 C50.7171243,20 59,28.2828757 59,38.5 Z" id="Stroke-3" stroke="#424242" stroke-width="4" stroke-linejoin="round"></path>
+                            <path d="M71,91.9899356 C71,78.0109524 66.0391148,65.6348701 58.4172397,58 C53.7118984,62.4262562 47.4288511,65.156812 40.5013888,65.156812 C33.5711489,65.156812 27.2881016,62.4262562 22.5827603,58 C14.9608852,65.6348701 10,78.0109524 10,91.9899356 C10,93.342559 10.0499977,94.6811219 10.1416602,96 L70.8583398,96 C70.9472246,94.6811219 71,93.342559 71,91.9899356" id="Fill-5" fill="#FFFFFF"></path>
+                            <path d="M71,91.9899356 C71,78.0109524 66.0391148,65.6348701 58.4172397,58 C53.7118984,62.4262562 47.4288511,65.156812 40.5013888,65.156812 C33.5711489,65.156812 27.2881016,62.4262562 22.5827603,58 C14.9608852,65.6348701 10,78.0109524 10,91.9899356 C10,93.342559 10.0499977,94.6811219 10.1416602,96 L70.8583398,96 C70.9472246,94.6811219 71,93.342559 71,91.9899356 Z" id="Stroke-7" stroke="#424242" stroke-width="4" stroke-linejoin="round"></path>
+                            <path d="M17,30 L17,30 C17,18.4033392 26.1246733,9 37.3833841,9 L43.6166159,9 C54.8727679,9 64,18.4033392 64,30" id="Stroke-9" stroke="#424242" stroke-width="4" stroke-linejoin="round"></path>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-12"></g>
+                            <polygon id="Stroke-11" stroke="#424242" stroke-width="4" stroke-linejoin="round" mask="url(#mask-2)" points="11 46 22 46 22 29 11 29"></polygon>
+                            <polygon id="Stroke-13" stroke="#424242" stroke-width="4" stroke-linejoin="round" mask="url(#mask-2)" points="59 46 70 46 70 29 59 29"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
