@@ -9,17 +9,25 @@ import {
   View,
 } from 'react-native';
 
-const Login = () => {
+import {
+  Colors,
+  DebugInstructions,
+  Header,
+  LearnMoreLinks,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+
+const SettingsMain = () => {
   return (
     <SafeAreaView>
       <StatusBar />
       <ScrollView>
         <View className="bg-primary">
-          <Text className="text-4xl">Login</Text>
+          <Text className="text-4xl">SettingsMain</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-export default Login;
+export default SettingsMain;

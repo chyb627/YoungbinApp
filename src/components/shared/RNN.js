@@ -1,97 +1,38 @@
 import React from 'react';
 import {AppState, Platform, BackHandler, Linking, Alert} from 'react-native';
 import {create} from 'mobx-persist';
-import CodePush from 'react-native-code-push';
+// import CodePush from 'react-native-code-push';
 import {Navigation} from 'react-native-navigation';
 import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
-import SplashScreen from 'react-native-splash-screen';
+// import SplashScreen from 'react-native-splash-screen';
 
-import analytics from '@react-native-firebase/analytics';
+// import analytics from '@react-native-firebase/analytics';
 import AsyncStorage from '@react-native-community/async-storage';
 
-import {clearNotification} from './Notification';
+// import {clearNotification} from './Notification';
 
 import {getMessagingToken, registerFirebasePush} from '~shared/FirebaseManager';
-import {getColor, makeToast, withTimeout} from '~shared/Common';
+import {getColor, makeToast, AsyncAlert} from '~shared/Common';
 import {
   requestUpdateMemberFcmToken,
   requestInsertNonMemberFcmToken,
 } from '~shared/Api';
 
+// import WordCloudView from '../test/WordCloudView';
+
 import LoadingOverlay, {
   setVisibleLoading,
   LOADING_OVERLAY_ID,
-} from '~ui/Common/LoadingOverlay';
+} from '~ui/LoadingOverlay';
 
-// import { accountConnectStore } from '~stores/AccountConnectStore';
-// 홈
-// import AnimatedSplash from '~screens/Start/AnimatedSplash';
-
-// 회원가입 및 로그인
-import TermList from '~screens/Join/TermList';
-import SignUp from '~screens/Join/SignUp';
-import TermsDetail from '~screens/Join/TermsDetail';
-import VerificationPhone from '~screens/Join/VerificationPhone';
-import CheckAffiliateUser from '~screens/Join/CheckAffiliateUser';
-import CompleteSignup from '~screens/Join/CompleteSignup';
-
-// 프리미엄 서비스
-import PayMentRegistration from '~screens/Premium/PayMentRegistration';
-import ServiceCancellation from '~screens/Premium/ServiceCancellation';
-import serviceDefinition from '~screens/Premium/serviceDefinition';
-import RegisterComplete from '~screens/Premium/RegisterComplete';
-import ExpirationScreen from '~screens/Premium/ExpirationScreen';
-
-// 대시보드
-import Dashboard from '~screens/Dashboard/Dashboard';
-import ConnectStore from '~screens/Dashboard/ConnectStore';
-import ConnectAccount from '~screens/Dashboard/ConnectAccount';
-import ChangeDisplayOrder from '~screens/Dashboard/ChangeDisplayOrder';
-import BossBenefit from '~screens/Dashboard/BossBenefit';
-import DiscountStatus from '~screens/Dashboard/DiscountStatus';
-
-// 리뷰
-import ReviewList from '~screens/Review/ReviewList';
-import UserReviewList from '~screens/Review/UserReviewList';
-import ReviewTips from '~screens/Review/ReviewTips';
-
-// 분석 리포트
-import ReportDashboard from '~screens/Report/ReportDashboard';
-import ReportTabMain from '~screens/Report/ReportTabMain';
-// import OtherStoresReportMain from '~screens/Report/OtherStoresReportMain';
-// import OtherStoresAnalysis from '~screens/Report/OtherStoresAnalysis';
-// import OtherStoresReviewList from '~screens/Report/OtherStoresReviewList';
-import LocationReportMain from '~screens/Report/LocationReportMain';
-
-// 통합 매출 조회
-import SalesAnalysisMain from '~screens/SalesAnalysis/SalesAnalysisMain';
-import SalesAnalysisList from '~screens/SalesAnalysis/SalesAnalysisList';
-import SalesAnalysisDetail from '~screens/SalesAnalysis/SalesAnalysisDetail';
-
-// 마이페이지
-import SettingsMain from '~screens/Settings/SettingsMain';
-import SettingAlarm from '~screens/Settings/SettingAlarm';
-import TermsAndPolicies from '~screens/Settings/TermsAndPolicies';
-import QNA from '~screens/Settings/QNA';
-import FAQ from '~screens/Settings/FAQ';
-import PremiumStatus from '~screens/Settings/PremiumStatus';
-
-// 고객센터
-// import CustomerCenterMain from '~screens/CustomerCenter/CustomerCenterMain';
-// import Events from '~screens/CustomerCenter/Events';
-// import Notice from '~screens/CustomerCenter/Notice';
-
-// 공통
-// import Popup from '~ui/Popup/Popup';
-import Landing from '~screens/Start/Landing';
-import Preview from '~screens/Start/Preview';
-import EnterBusinessNumber from '~screens/Start/EnterBusinessNumber';
-import SystemAlert from '~screens/Start/SystemAlert';
-import UpdateScreen from '~shared/UpdateManager';
+import Login from '~screens/Start/Login';
+import PurchaseVehicle from '~screens/Start/PurchaseVehicle';
+import RegisterForSale from '~screens/Start/RegisterForSale';
+import SettingsMain from '~screens/Start/SettingsMain';
 
 // import { hasLocationPermission, hasPermissionsWithoutLocation } from '~shared/PermissionManager';
 // import { checkAppVersion } from './UpdateManager';
-import config from 'config';
+// import config from 'config';
 
 export const registerScreens = client => {
   // !!! 주의사항 !!! 제스쳐에 문제가 있을때, 세번째 파라미터 willUseGesture true로 설정할 것.
@@ -99,85 +40,27 @@ export const registerScreens = client => {
   // registerComponent('AnimatedSplash', AnimatedSplash);
   // getMessagingToken();
 
-  // 대시보드
-  registerComponent('Dashboard', Dashboard);
-  registerComponent('ConnectStore', ConnectStore);
-  registerComponent('ConnectAccount', ConnectAccount);
-  registerComponent('ChangeDisplayOrder', ChangeDisplayOrder, true);
-  registerComponent('BossBenefit', BossBenefit, true);
-  registerComponent('DiscountStatus', DiscountStatus, true);
-
-  // 리뷰
-  registerComponent('ReviewList', ReviewList, true);
-  registerComponent('UserReviewList', UserReviewList, true);
-  registerComponent('ReviewTips', ReviewTips, true);
-
-  // 다른 매장
-  registerComponent('ReportDashboard', ReportDashboard);
-  registerComponent('ReportTabMain', ReportTabMain);
-
-  // registerComponent('OtherStoresReportMain', OtherStoresReportMain);
-  // registerComponent('OtherStoresAnalysis', OtherStoresAnalysis);
-  // registerComponent('OtherStoresReviewList', OtherStoresReviewList);
-  registerComponent('LocationReportMain', LocationReportMain);
-
-  // 통합 매출 조회
-  registerComponent('SalesAnalysisMain', SalesAnalysisMain);
-  registerComponent('SalesAnalysisList', SalesAnalysisList);
-  registerComponent('SalesAnalysisDetail', SalesAnalysisDetail);
-
-  // 마이페이지
+  registerComponent('Login', Login);
+  registerComponent('PurchaseVehicle', PurchaseVehicle);
+  registerComponent('RegisterForSale', RegisterForSale);
   registerComponent('SettingsMain', SettingsMain);
-  registerComponent('SettingAlarm', SettingAlarm);
-  registerComponent('TermsAndPolicies', TermsAndPolicies);
-  registerComponent('PremiumStatus', PremiumStatus);
-
-  // 고객센터
-  // registerComponent('CustomerCenterMain', CustomerCenterMain);
-  // registerComponent('Events', Events);
-  registerComponent('FAQ', FAQ);
-  registerComponent('QNA', QNA);
-
-  // 검색
-  // registerComponent('Popup', Popup, true);
-
-  // 회원가입
-  registerComponent('TermList', TermList);
-  registerComponent('SignUp', SignUp);
-  registerComponent('TermsDetail', TermsDetail);
-  registerComponent('VerificationPhone', VerificationPhone);
-  registerComponent('CheckAffiliateUser', CheckAffiliateUser);
-  registerComponent('CompleteSignup', CompleteSignup);
-
-  // 프리미엄 서비스
-  registerComponent('PayMentRegistration', PayMentRegistration);
-  registerComponent('ServiceCancellation', ServiceCancellation);
-  registerComponent('serviceDefinition', serviceDefinition);
-  registerComponent('RegisterComplete', RegisterComplete);
-  registerComponent('ExpirationScreen', ExpirationScreen);
-
-  // ETC
-  registerComponent('Landing', Landing);
-  registerComponent('Preview', Preview);
-  registerComponent('EnterBusinessNumber', EnterBusinessNumber);
-  registerComponent('SystemAlert', SystemAlert);
-  registerComponent('UpdateScreen', UpdateScreen);
 
   Navigation.registerComponent('LoadingOverlay', () => LoadingOverlay);
+
   // Navigation.registerComponent('Overlay', () => Overlay);
 };
 
-function checkCodePushUpdate() {
-  return CodePush.sync({
-    updateDialog: false,
-    // checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
-    installMode: CodePush.InstallMode.IMMEDIATE,
-    rollbackRetryOptions: {
-      delayInHours: 1,
-      maxRetryAttempts: 20,
-    },
-  });
-}
+// function checkCodePushUpdate() {
+//   return CodePush.sync({
+//     updateDialog: false,
+//     // checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+//     installMode: CodePush.InstallMode.IMMEDIATE,
+//     rollbackRetryOptions: {
+//       delayInHours: 1,
+//       maxRetryAttempts: 20,
+//     },
+//   });
+// }
 
 /**
  * 1. 앱시작 - RNN
@@ -189,13 +72,29 @@ export const AppStartRNN = () => {
       setNavigationDefaultOptions();
       registerScreens();
 
+      // const updateInfo = await getUpdateInfomation();
       await AppStartCodePush();
+
+      // if (updateInfo.isNeedUpdate) {
+      //   let isPressedOK = false;
+      //   if (updateInfo.isNeedForceUpdate) {
+      //     isPressedOK = await AsyncAlert(null, '새 버전이 출시되었습니다. 업데이트 후 이용해주세요.', '확인');
+      //   } else {
+      //     isPressedOK = await AsyncAlert(null, '새 버전이 출시되었습니다. 업데이트하시겠습니까?', '확인', '취소');
+      //   }
+
+      //   if (isPressedOK) {
+      //     Linking.openURL(updateInfo.storeUrl).catch((err) => {
+      //       console.debug(err);
+      //     });
+      //   }
+
+      //   SplashScreen.show();
+      // }
     } catch (error) {
       console.info(
         `error AppStartRNN > registerAppLaunchedListener [${error}]`,
       );
-      AppStartCodePush();
-      SplashScreen.show();
     }
   });
 
@@ -228,10 +127,10 @@ export const AppStartRNN = () => {
 const AppStartCodePush = async () => {
   console.debug('AppStartCodePush > Start');
 
-  if (__DEV__) {
-    AppStart();
-    return;
-  }
+  // if (__DEV__) {
+  AppStart();
+  return;
+  // }
 
   try {
     // if (config.IOS_TEST_MODE) {
@@ -246,60 +145,52 @@ const AppStartCodePush = async () => {
     //   'DOWNLOADING_PACKAGE',
     //   'INSTALLING_UPDATE',
     // ];
-    if (Platform.OS === 'ios') {
-      SplashScreen.hide(); //FIXME: 추후 삭제
-    }
-    const checkForUpdate = await withTimeout(CodePush.checkForUpdate(), 5);
-    // if (!checkForUpdate) {
-    //   AppStart();
-    //   return;
+    // if (Platform.OS === 'ios') {
+    //   SplashScreen.hide(); //FIXME: 추후 삭제
     // }
+
     // }
-    let syncStatus = await CodePush.sync(
-      {
-        updateDialog: false,
-        // checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
-        installMode: CodePush.InstallMode.IMMEDIATE,
-        rollbackRetryOptions: {
-          delayInHours: 1,
-          maxRetryAttempts: 20,
-        },
-      },
-      async status => {
-        if (
-          status &&
-          status === CodePush.SyncStatus.DOWNLOADING_PACKAGE &&
-          currentScreen?.componentNameWithoutOverlay !== 'UpdateScreen'
-        ) {
-          SplashScreen.hide(); //FIXME: 추후 삭제
+    // let syncStatus = await CodePush.sync(
+    //   {
+    //     updateDialog: false,
+    //     // checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+    //     installMode: CodePush.InstallMode.IMMEDIATE,
+    //     rollbackRetryOptions: {
+    //       delayInHours: 1,
+    //       maxRetryAttempts: 20,
+    //     },
+    //   },
+    //   async (status) => {
+    //     if (
+    //       status &&
+    //       status === CodePush.SyncStatus.DOWNLOADING_PACKAGE &&
+    //       currentScreen?.componentNameWithoutOverlay !== 'UpdateScreen'
+    //     ) {
+    //       // Alert.alert('UpdateScreen');
+    //       // setRoot('UpdateScreen');
+    //     }
+    //     // console.log('status :: ', status, statusNameArray[status]);
+    //   },
+    //   (downloadProgress) => {
+    //     if (currentScreen?.componentNameWithoutOverlay === 'UpdateScreen') {
+    //       console.log('downloadProgress :: ', downloadProgress);
+    //       Navigation.updateProps(currentScreen.componentIdWithoutOverlay, { downloadProgress });
+    //     }
+    //   },
+    // );
 
-          // Alert.alert('UpdateScreen');
-          setRoot('UpdateScreen');
-        }
-        // console.log('status :: ', status, statusNameArray[status]);
-      },
-      downloadProgress => {
-        if (currentScreen?.componentNameWithoutOverlay === 'UpdateScreen') {
-          // console.log('downloadProgress :: ', downloadProgress);
-          Navigation.updateProps(currentScreen.componentIdWithoutOverlay, {
-            downloadProgress,
-          });
-        }
-      },
-    );
+    // switch (syncStatus) {
+    //   case CodePush.SyncStatus.UP_TO_DATE:
+    //   case CodePush.SyncStatus.UNKNOWN_ERROR:
+    //   case CodePush.SyncStatus.UPDATE_IGNORED:
+    //     AppStart();
+    //     break;
+    //   default:
+    //     break;
+    // }
+    let syncStatus = await checkCodePushUpdate();
 
-    switch (syncStatus) {
-      case CodePush.SyncStatus.UP_TO_DATE:
-      case CodePush.SyncStatus.UNKNOWN_ERROR:
-      case CodePush.SyncStatus.UPDATE_IGNORED:
-        AppStart();
-        break;
-      default:
-        break;
-    }
-    // let syncStatus = await checkCodePushUpdate();
-
-    // AppStart();
+    AppStart();
 
     // let syncStatus = await checkCodePushUpdate();
     // console.info('AppStartCodePush > CodePush.sync completed with status: ', syncStatus);
@@ -310,7 +201,7 @@ const AppStartCodePush = async () => {
     // }
   } catch (error) {
     console.info('AppStartCodePush > CodePush.sync error: ', error);
-    config.IOS_TEST_MODE = false;
+
     // if (__DEV__ && String(error).includes('Error: 400')) {
     //   // DEBUG는 cp가 없다. 무시.
     // } else {
@@ -334,7 +225,7 @@ function AppStart() {
     );
     if (currentAppState === 'active') {
       // checkCodePushUpdate(); // 임시주석. 확인후 삭제하든 처리하자.
-      clearNotification();
+      // clearNotification();
     }
   });
 
@@ -347,40 +238,41 @@ function AppStart() {
      * 4. 앱시작 - 공통부 실행
      */
     hydrateStores().then(async () => {
-      if (config.IOS_TEST_MODE) {
-        setRoot('EnterBusinessNumber');
-        SplashScreen.hide();
+      // setRoot('Login');
+      setRootBottomTabs();
+      // SplashScreen.hide();
+      // if (config.IOS_TEST_MODE && Platform.OS === 'ios') {
+      //   setRoot('EnterBusinessNumber');
+      //   SplashScreen.hide();
 
-        return;
-      } else if (config.IS_SHOW_SYSTEM_ALERT) {
-        setRoot('SystemAlert');
-        SplashScreen.hide();
+      //   return;
+      // } else if (config.IS_SHOW_SYSTEM_ALERT) {
+      //   // setRoot('WordCloudView');
+      //   setRoot('SystemAlert');
+      //   SplashScreen.hide();
 
-        return;
-      }
+      //   return;
+      // }
 
-      let isFirstStart = (await AsyncStorage.getItem('isFirstStart')) !== 'N';
-      if (!isFirstStart) {
-        SplashScreen.hide();
-        setTimeout(async () => {
-          setRoot('Dashboard');
+      // let isFirstStart = (await AsyncStorage.getItem('isFirstStart')) !== 'N';
+      // if (!isFirstStart) {
+      //   SplashScreen.hide();
+      //   setTimeout(async () => {
+      //     setRoot('Dashboard');
 
-          const fcmToken = await getMessagingToken();
-          await requestUpdateMemberFcmToken(fcmToken);
-        }, 100);
-      } else {
-        SplashScreen.hide();
-        setTimeout(async () => {
-          setRoot('Preview');
+      //     const fcmToken = await getMessagingToken();
+      //     await requestUpdateMemberFcmToken(fcmToken);
+      //   }, 100);
+      // } else {
+      //   SplashScreen.hide();
+      //   setTimeout(async () => {
+      //     setRoot('Preview');
 
-          const fcmToken = await getMessagingToken();
-          await requestInsertNonMemberFcmToken(fcmToken);
-          console.log(
-            '첫 실행 **************************** fcmToken :: ',
-            fcmToken,
-          );
-        }, 100);
-      }
+      //     const fcmToken = await getMessagingToken();
+      //     await requestInsertNonMemberFcmToken(fcmToken);
+      //     console.log('첫 실행 **************************** fcmToken :: ', fcmToken);
+      //   }, 100);
+      // }
     });
   })();
 }
@@ -397,7 +289,7 @@ async function hydrateStores() {
 }
 
 const registerComponent = (name, Comp, _client, willUseGesture) => {
-  // console.debug('registerComponent', name);
+  console.debug('registerComponent', name);
   let _Component = Comp;
   if (willUseGesture) {
     // DraggableFlatList 사용시 willUseGesture true로 설정할 것.
@@ -437,7 +329,9 @@ export const setNavigationDefaultOptions = () => {
       },
     },
     bottomTabs: {
-      visible: false,
+      borderWidth: 1,
+      borderColor: getColor('wr-gray-200'),
+      visible: true,
     },
     bottomTab: {},
 
@@ -509,15 +403,15 @@ Navigation.events().registerComponentDidAppearListener(async data => {
     currentScreen.componentName = componentName;
   }
 
-  if (!componentName.includes('Overlay')) {
-    await analytics().logScreenView({
-      screen_name: currentScreen.componentNameWithoutOverlay,
-      screen_class: currentScreen.componentNameWithoutOverlay,
-    });
+  // if (!componentName.includes('Overlay')) {
+  //   await analytics().logScreenView({
+  //     screen_name: currentScreen.componentNameWithoutOverlay,
+  //     screen_class: currentScreen.componentNameWithoutOverlay,
+  //   });
 
-    currentScreen.componentIdWithoutOverlay = componentId;
-    currentScreen.componentNameWithoutOverlay = componentName;
-  }
+  //   currentScreen.componentIdWithoutOverlay = componentId;
+  //   currentScreen.componentNameWithoutOverlay = componentName;
+  // }
   console.log('registerComponentDidAppearListener', currentScreen);
 });
 
@@ -630,10 +524,6 @@ export const dismissModal = async componentId => {
   await Navigation.dismissModal(componentId);
 };
 
-export const dismissAllModals = async () => {
-  await Navigation.dismissAllModals();
-};
-
 /**
  * modal 호출용 공통 함수
  * {name:String, passProps:Object, title:String?}
@@ -744,7 +634,7 @@ export const popComponent = componentId => {
  * Stack의 첫 화면으로 돌아간다.
  * @param String props.componentId
  */
-export const popToRoot = async componentId => {
+export const popToRoot = componentId => {
   let id = componentId;
   if (!id) {
     id = currentScreen.componentId;
@@ -788,44 +678,121 @@ export const setRoot = async (componentName, passProps) => {
   }
 };
 
-/**
- * modal popup 호출용 공통 함수
- * @param String name RNN에 등록한 Screen Name
- * @param Object passProps Overlay에 넘겨줄 Props
- */
-const POPUP_OVERLAY_ID = 'POPUP_OVERLAY';
-export let popupInnerView = null;
-
-export const showPopup = async (component, display, title, passProps) => {
-  popupInnerView = component;
+export const setRootBottomTabs = async passProps => {
   try {
-    await Navigation.showOverlay({
-      component: {
-        id: POPUP_OVERLAY_ID,
-        name: 'Popup',
-        passProps: {display, title, ...passProps},
-        options: {
-          modalPresentationStyle: 'overFullScreen',
-          layout: {
-            backgroundColor: 'transparent',
-            componentBackgroundColor: 'transparent',
-          },
-          overlay: {
-            interceptTouchOutside: true,
-          },
-          statusBar: {
-            // backgroundColor: 'transparent',
-          },
+    const HomeSrc = require('~assets/images/bottom-tabs/ico-home-on.png');
+    const Purchase = require('~assets/images/bottom-tabs/ico-purch-off.png');
+    const Register = require('~assets/images/bottom-tabs/ico-regist-off.png');
+    const Inquiry = require('~assets/images/bottom-tabs/ico-inq-off.png');
+    const Profile = require('~assets/images/bottom-tabs/ico-my-off.png');
+
+    const bottomTabOption = {
+      iconColor: getColor('wr-gray-600'),
+      selectedIconColor: getColor('black'),
+      textColor: getColor('wr-gray-600'),
+      selectedTextColor: getColor('black'),
+    };
+
+    Navigation.setRoot({
+      root: {
+        bottomTabs: {
+          id: 'BOTTOM_TABS_LAYOUT',
+          children: [
+            {
+              stack: {
+                children: [
+                  {
+                    component: {
+                      name: 'Login',
+                    },
+                  },
+                ],
+                options: {
+                  bottomTab: {
+                    ...bottomTabOption,
+                    text: '홈',
+                    icon: HomeSrc,
+                  },
+                },
+              },
+            },
+            {
+              stack: {
+                children: [
+                  {
+                    component: {
+                      name: 'PurchaseVehicle',
+                    },
+                  },
+                ],
+                options: {
+                  bottomTab: {
+                    ...bottomTabOption,
+                    text: '차량구매',
+                    icon: Purchase,
+                  },
+                },
+              },
+            },
+            {
+              stack: {
+                children: [
+                  {
+                    component: {
+                      name: 'RegisterForSale',
+                    },
+                  },
+                ],
+                options: {
+                  bottomTab: {
+                    ...bottomTabOption,
+                    text: '거래등록',
+                    icon: Register,
+                  },
+                },
+              },
+            },
+            {
+              stack: {
+                children: [
+                  {
+                    component: {
+                      name: 'SettingsMain',
+                    },
+                  },
+                ],
+                options: {
+                  bottomTab: {
+                    ...bottomTabOption,
+                    text: '마이페이지',
+                    icon: Profile,
+                  },
+                },
+              },
+            },
+            {
+              stack: {
+                children: [
+                  {
+                    component: {
+                      name: 'Login',
+                    },
+                  },
+                ],
+                options: {
+                  bottomTab: {
+                    ...bottomTabOption,
+                    text: '관리자문의',
+                    icon: Inquiry,
+                  },
+                },
+              },
+            },
+          ],
         },
       },
     });
-  } catch (error) {
-    console.debug(error);
+  } catch (err) {
+    console.log(err);
   }
-  // }
-};
-
-export const dismissPopup = async () => {
-  await Navigation.dismissOverlay(POPUP_OVERLAY_ID);
-  popupInnerView = null;
 };
