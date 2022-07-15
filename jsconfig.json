@@ -1,0 +1,22 @@
+{
+  // "javascript.implicitProjectConfig.checkJs": false,
+  // "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "exclude": ["node_modules/**/*"],
+  "include": ["*.js","src/**/*", "tailwind.config.js", "src/config.js"],
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["./*"],
+      "~assets/*": ["assets/*"],
+      "~screens/*": ["components/screens/*"],
+      "~shared/*": ["components/shared/*"],
+      "~stores/*": ["components/stores/*"],
+      "~styles/*": ["components/styles/*"],
+      "~ui/*": ["components/ui/*"],
+      "~utils/*": ["utils/*"]
+    },
+    "jsx": "react-native"
+    // "allowSyntheticDefaultImports": true
+  }
+}

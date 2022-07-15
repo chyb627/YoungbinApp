@@ -1,7 +1,9 @@
 module.exports = {
-  arrowParens: 'avoid',
-  bracketSameLine: true,
-  bracketSpacing: false,
+  // https://prettier.io/docs/en/configuration.html 참고
+  bracketSpacing: true,
+  jsxBracketSameLine: true,
+  semi: true,
+  printWidth: 130,
   singleQuote: true,
   trailingComma: 'all',
 };

@@ -25,7 +25,7 @@ import LoadingOverlay, {
 // import AnimatedSplash from '~screens/Start/AnimatedSplash';
 
 import Login from '~screens/Start/Login';
-import AlgoCarMain from '~screens/Start/AlgoCarMain';
+import YoungbinMain from '~screens/Start/YoungbinMain';
 import PurchaseVehicle from '~screens/Start/PurchaseVehicle';
 import RegisterForSale from '~screens/Start/RegisterForSale';
 import SettingsMain from '~screens/Start/SettingsMain';
@@ -41,7 +41,7 @@ export const registerScreens = client => {
   // getMessagingToken();
 
   registerComponent('Login', Login);
-  registerComponent('AlgoCarMain', AlgoCarMain);
+  registerComponent('YoungbinMain', YoungbinMain);
   registerComponent('PurchaseVehicle', PurchaseVehicle);
   registerComponent('RegisterForSale', RegisterForSale);
   registerComponent('SettingsMain', SettingsMain);
@@ -707,7 +707,7 @@ export const setRootBottomTabs = async passProps => {
                 children: [
                   {
                     component: {
-                      name: 'AlgoCarMain',
+                      name: 'YoungbinMain',
                     },
                   },
                 ],

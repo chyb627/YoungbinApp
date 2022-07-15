@@ -17,39 +17,30 @@ module.exports = {
 
       black: '#0f0f0f',
       white: '#fff', //,
-      primary: '#2B64CF',
+
+      // 알고카
+      primary: '#3194f7',
+      'ag-gray-100': '#f7f7f7',
+      'ag-gray-200': '#eaeaea',
+      'ag-gray-300': '#dddddd',
+      'ag-gray-400': '#bebebe',
+      'ag-gray-600': '#888888',
+      'ag-gray-800': '#424242',
+      'ag-gray-900': '#0f0f0f',
+      'ag-gray-1000': '#666666',
+
+      'ag-green-100': '#e7f7f4',
+
+      'primary-2': '#F54D63',
       'primary-review': '#209AE7', // 내 가게 리뷰
       'primary-sales': '#FF8AAD', // 매출 정보
-      'primary-other-store': '#421F9B', // 다른 매장
+      'primary-other-store': '#00C2D4', // 다른 매장
       'primary-other-store-second': '#323C48',
       'primary-other-store-second-light': '#4A5460',
-      'primary-other-store-second-dark': '#2B343E',
-      'primary-other-store-light': '#B9A7F9', // 다른 매장
-      'primary-other-store-dark': '#371A82', // 다른 매장
-      'primary-ad': '#D9D2EB',
-      'primary-ad-light': '#F9FAFF',
-      'other-store-banner': '#994F05',
+      'primary-other-store-dark': '#009BA9', // 다른 매장
       'other-store-text-green': '#1BFAAB',
       'other-store-text-yellow': '#F3E34B',
-      banner: {
-        100: '#385687',
-        200: '#175AA1',
-        300: '#12357C',
-        400: '#082E81',
-      },
-      map: {
-        pink: '#FFDFD5',
-        blue: '#CCF3F7',
-        purple: '#D8DCFF',
-        yellow: '#FFF5CD',
-      },
-      tips: {
-        main: '#00A8F0',
-        pink: '#FFCAD9',
-        green: '#E5FFEB',
-        yellow: '#FFFCE5',
-        blue: '#D8F4FF',
-      },
+
       'graph-red': '#FF5B2D',
       'graph-teal': '#00C2D4',
       'graph-blue': '#3A4DFC',
@@ -70,7 +61,6 @@ module.exports = {
       'wr-gray-200': '#EAEAEA',
       'wr-gray-300': '#E7E8E7',
       'wr-gray-400': '#D2D2D2', // placeholder
-      'wr-gray-500': '#BDBDBD',
       'wr-gray-600': '#999999',
       'wr-gray-700': '#555555',
       // 'wr-gray-900': '#373737',
@@ -127,7 +117,7 @@ module.exports = {
         100: '#fffff0',
         200: '#fefcbf',
         300: '#faf089',
-        400: '#f6e05e',
+        400: '#fee600',
         500: '#ecc94b',
         600: '#d69e2e',
         700: '#b7791f',
@@ -139,7 +129,7 @@ module.exports = {
         200: '#c6f6d5',
         300: '#9ae6b4',
         400: '#68d391',
-        500: '#48bb78',
+        500: '#04ce5c',
         600: '#38a169',
         700: '#2f855a',
         800: '#276749',
@@ -165,7 +155,7 @@ module.exports = {
         600: '#3182ce',
         700: '#2b6cb0',
         800: '#2c5282',
-        900: '#282828',
+        900: '#2a4365',
       },
       indigo: {
         100: '#ebf4ff',
@@ -245,11 +235,9 @@ module.exports = {
       72: '18.00rem', // 추가
       80: '20.00rem', // 추가
       84: '21.00rem', // 추가
-      92: '23.00rem', // 추가
       96: '24.00rem', // 추가
       108: '27.00rem', // 추가
       120: '30.00rem', // 추가
-      140: '35.00rem', // 추가
     },
     backgroundColor: (theme) => theme('colors'),
     backgroundOpacity: (theme) => theme('opacity'),
@@ -371,7 +359,7 @@ module.exports = {
       '2xl': '1.2rem', // '1.5rem',
       '3xl': '1.4rem', // '1.875rem',
       '4xl': '1.8rem', // '2.25rem',
-      '5xl': '2.0rem', // '3rem',
+      '5xl': '2.2rem', // '3rem',
       '6xl': '2.4rem', // '4rem',
     },
     fontWeight: {
