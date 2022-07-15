@@ -25,6 +25,7 @@ import LoadingOverlay, {
 // import AnimatedSplash from '~screens/Start/AnimatedSplash';
 
 import Login from '~screens/Start/Login';
+import AlgoCarMain from '~screens/Start/AlgoCarMain';
 import PurchaseVehicle from '~screens/Start/PurchaseVehicle';
 import RegisterForSale from '~screens/Start/RegisterForSale';
 import SettingsMain from '~screens/Start/SettingsMain';
@@ -40,6 +41,7 @@ export const registerScreens = client => {
   // getMessagingToken();
 
   registerComponent('Login', Login);
+  registerComponent('AlgoCarMain', AlgoCarMain);
   registerComponent('PurchaseVehicle', PurchaseVehicle);
   registerComponent('RegisterForSale', RegisterForSale);
   registerComponent('SettingsMain', SettingsMain);
@@ -131,85 +133,85 @@ const AppStartCodePush = async () => {
   return;
   // }
 
-  try {
-    // if (config.IOS_TEST_MODE) {
-    // const statusNameArray = [
-    //   'UP_TO_DATE',
-    //   'UPDATE_INSTALLED',
-    //   'UPDATE_IGNORED',
-    //   'UNKNOWN_ERROR',
-    //   'SYNC_IN_PROGRESS',
-    //   'CHECKING_FOR_UPDATE',
-    //   'AWAITING_USER_ACTION',
-    //   'DOWNLOADING_PACKAGE',
-    //   'INSTALLING_UPDATE',
-    // ];
-    // if (Platform.OS === 'ios') {
-    //   SplashScreen.hide(); //FIXME: 추후 삭제
-    // }
+  // try {
+  //   // if (config.IOS_TEST_MODE) {
+  //   // const statusNameArray = [
+  //   //   'UP_TO_DATE',
+  //   //   'UPDATE_INSTALLED',
+  //   //   'UPDATE_IGNORED',
+  //   //   'UNKNOWN_ERROR',
+  //   //   'SYNC_IN_PROGRESS',
+  //   //   'CHECKING_FOR_UPDATE',
+  //   //   'AWAITING_USER_ACTION',
+  //   //   'DOWNLOADING_PACKAGE',
+  //   //   'INSTALLING_UPDATE',
+  //   // ];
+  //   if (Platform.OS === 'ios') {
+  //     SplashScreen.hide(); //FIXME: 추후 삭제
+  //   }
 
-    // }
-    // let syncStatus = await CodePush.sync(
-    //   {
-    //     updateDialog: false,
-    //     // checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
-    //     installMode: CodePush.InstallMode.IMMEDIATE,
-    //     rollbackRetryOptions: {
-    //       delayInHours: 1,
-    //       maxRetryAttempts: 20,
-    //     },
-    //   },
-    //   async (status) => {
-    //     if (
-    //       status &&
-    //       status === CodePush.SyncStatus.DOWNLOADING_PACKAGE &&
-    //       currentScreen?.componentNameWithoutOverlay !== 'UpdateScreen'
-    //     ) {
-    //       // Alert.alert('UpdateScreen');
-    //       // setRoot('UpdateScreen');
-    //     }
-    //     // console.log('status :: ', status, statusNameArray[status]);
-    //   },
-    //   (downloadProgress) => {
-    //     if (currentScreen?.componentNameWithoutOverlay === 'UpdateScreen') {
-    //       console.log('downloadProgress :: ', downloadProgress);
-    //       Navigation.updateProps(currentScreen.componentIdWithoutOverlay, { downloadProgress });
-    //     }
-    //   },
-    // );
+  //   // }
+  //   // let syncStatus = await CodePush.sync(
+  //   //   {
+  //   //     updateDialog: false,
+  //   //     // checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+  //   //     installMode: CodePush.InstallMode.IMMEDIATE,
+  //   //     rollbackRetryOptions: {
+  //   //       delayInHours: 1,
+  //   //       maxRetryAttempts: 20,
+  //   //     },
+  //   //   },
+  //   //   async (status) => {
+  //   //     if (
+  //   //       status &&
+  //   //       status === CodePush.SyncStatus.DOWNLOADING_PACKAGE &&
+  //   //       currentScreen?.componentNameWithoutOverlay !== 'UpdateScreen'
+  //   //     ) {
+  //   //       // Alert.alert('UpdateScreen');
+  //   //       // setRoot('UpdateScreen');
+  //   //     }
+  //   //     // console.log('status :: ', status, statusNameArray[status]);
+  //   //   },
+  //   //   (downloadProgress) => {
+  //   //     if (currentScreen?.componentNameWithoutOverlay === 'UpdateScreen') {
+  //   //       console.log('downloadProgress :: ', downloadProgress);
+  //   //       Navigation.updateProps(currentScreen.componentIdWithoutOverlay, { downloadProgress });
+  //   //     }
+  //   //   },
+  //   // );
 
-    // switch (syncStatus) {
-    //   case CodePush.SyncStatus.UP_TO_DATE:
-    //   case CodePush.SyncStatus.UNKNOWN_ERROR:
-    //   case CodePush.SyncStatus.UPDATE_IGNORED:
-    //     AppStart();
-    //     break;
-    //   default:
-    //     break;
-    // }
-    let syncStatus = await checkCodePushUpdate();
+  //   // switch (syncStatus) {
+  //   //   case CodePush.SyncStatus.UP_TO_DATE:
+  //   //   case CodePush.SyncStatus.UNKNOWN_ERROR:
+  //   //   case CodePush.SyncStatus.UPDATE_IGNORED:
+  //   //     AppStart();
+  //   //     break;
+  //   //   default:
+  //   //     break;
+  //   // }
+  //   let syncStatus = await checkCodePushUpdate();
 
-    AppStart();
+  //   AppStart();
 
-    // let syncStatus = await checkCodePushUpdate();
-    // console.info('AppStartCodePush > CodePush.sync completed with status: ', syncStatus);
-    // wait for the initial code sync to complete else we get flicker
-    // in the app when it updates after it has started up and is
-    // on the Home screen
-    // if (syncStatus === 0 || syncStatus === 2 || syncStatus === 3) {
-    // }
-  } catch (error) {
-    console.info('AppStartCodePush > CodePush.sync error: ', error);
+  //   // let syncStatus = await checkCodePushUpdate();
+  //   // console.info('AppStartCodePush > CodePush.sync completed with status: ', syncStatus);
+  //   // wait for the initial code sync to complete else we get flicker
+  //   // in the app when it updates after it has started up and is
+  //   // on the Home screen
+  //   // if (syncStatus === 0 || syncStatus === 2 || syncStatus === 3) {
+  //   // }
+  // } catch (error) {
+  //   console.info('AppStartCodePush > CodePush.sync error: ', error);
 
-    // if (__DEV__ && String(error).includes('Error: 400')) {
-    //   // DEBUG는 cp가 없다. 무시.
-    // } else {
-    //   console.info('AppStartCodePush > CodePush.sync error: ', error);
-    // }
-    // this could happen if the app doesn't have connectivity
-    // just go ahead and start up as normal
-    AppStart();
-  }
+  //   // if (__DEV__ && String(error).includes('Error: 400')) {
+  //   //   // DEBUG는 cp가 없다. 무시.
+  //   // } else {
+  //   //   console.info('AppStartCodePush > CodePush.sync error: ', error);
+  //   // }
+  //   // this could happen if the app doesn't have connectivity
+  //   // just go ahead and start up as normal
+  //   AppStart();
+  // }
 };
 
 /**
@@ -238,7 +240,6 @@ function AppStart() {
      */
     hydrateStores().then(async () => {
       setRoot('Login');
-      setRootBottomTabs();
       // SplashScreen.hide();
       // if (config.IOS_TEST_MODE && Platform.OS === 'ios') {
       //   setRoot('EnterBusinessNumber');
@@ -371,7 +372,7 @@ const backAction = () => {
   );
   console.debug(`[ ] backAction currentpage [${currentpage}]`);
 
-  if (currentpage === 'Dashboard') {
+  if (currentpage === 'PurchaseVehicle') {
     if (!exitApp) {
       makeToast('이전 버튼을 한 번 더 누르시면 종료됩니다.');
       exitApp = true;
@@ -521,6 +522,10 @@ export const showModalPopup = (name, passProps) => {
 
 export const dismissModal = async componentId => {
   await Navigation.dismissModal(componentId);
+};
+
+export const dismissAllModals = async componentId => {
+  await Navigation.dismissAllModals();
 };
 
 /**
@@ -702,7 +707,7 @@ export const setRootBottomTabs = async passProps => {
                 children: [
                   {
                     component: {
-                      name: 'Login',
+                      name: 'AlgoCarMain',
                     },
                   },
                 ],
@@ -745,7 +750,7 @@ export const setRootBottomTabs = async passProps => {
                 options: {
                   bottomTab: {
                     ...bottomTabOption,
-                    text: '거래등록',
+                    text: '내차팔기',
                     icon: Register,
                   },
                 },

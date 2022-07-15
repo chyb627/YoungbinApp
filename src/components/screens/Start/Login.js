@@ -26,7 +26,9 @@ const Login = observer(props => {
       <KeyboardAwareScrollView className="flex h-full w-full px-5 bg-white rounded-lg">
         <View className="justify-center py-16">
           <View className="h-22 my-1">
-            <Text className="text-5xl font-bold text-black pb-1">영빈 앱</Text>
+            <Text className="text-5xl font-bold text-black pb-1">
+              자동차 거래,{' '}
+            </Text>
             <Text className="text-5xl font-bold text-black">
               시작해 보세요.
             </Text>
@@ -34,7 +36,7 @@ const Login = observer(props => {
 
           <View className="h-6 w-full">
             <Text className="text-base text-black font-normal">
-              영빈앱에서 다양한 거래를 만나보세요
+              알고카에서 다양한 거래를 만나보세요
             </Text>
           </View>
         </View>
