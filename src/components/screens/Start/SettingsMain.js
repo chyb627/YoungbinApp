@@ -1,33 +1,25 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {ScrollView, StatusBar, Text, View} from 'react-native';
+import {observer} from 'mobx-react-lite';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import TopNavigationBar from '~ui/TopNavigationBar';
 
-const SettingsMain = () => {
+const SettingsMain = observer(props => {
   return (
-    <SafeAreaView>
-      <StatusBar />
+    <View>
+      <TopNavigationBar
+        componentId={props.componentId}
+        title="영빈앱"
+        hasBack={false}
+        hasClose={false}
+      />
       <ScrollView>
         <View className="bg-primary">
           <Text className="text-4xl">SettingsMain</Text>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
-};
+});
 
 export default SettingsMain;

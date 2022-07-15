@@ -9,21 +9,20 @@ import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 // import analytics from '@react-native-firebase/analytics';
 import AsyncStorage from '@react-native-community/async-storage';
 
-// import {clearNotification} from './Notification';
+// import { clearNotification } from './Notification';
 
-import {getMessagingToken, registerFirebasePush} from '~shared/FirebaseManager';
+// import { getMessagingToken, registerFirebasePush } from '~shared/FirebaseManager';
 import {getColor, makeToast, AsyncAlert} from '~shared/Common';
-import {
-  requestUpdateMemberFcmToken,
-  requestInsertNonMemberFcmToken,
-} from '~shared/Api';
-
-// import WordCloudView from '../test/WordCloudView';
+// import { requestUpdateMemberFcmToken, requestInsertNonMemberFcmToken } from '~shared/Api';
 
 import LoadingOverlay, {
   setVisibleLoading,
   LOADING_OVERLAY_ID,
 } from '~ui/LoadingOverlay';
+
+// import { accountConnectStore } from '~stores/AccountConnectStore';
+// 홈
+// import AnimatedSplash from '~screens/Start/AnimatedSplash';
 
 import Login from '~screens/Start/Login';
 import PurchaseVehicle from '~screens/Start/PurchaseVehicle';
@@ -238,7 +237,7 @@ function AppStart() {
      * 4. 앱시작 - 공통부 실행
      */
     hydrateStores().then(async () => {
-      // setRoot('Login');
+      setRoot('Login');
       setRootBottomTabs();
       // SplashScreen.hide();
       // if (config.IOS_TEST_MODE && Platform.OS === 'ios') {
