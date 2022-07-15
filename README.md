@@ -15,3 +15,7 @@ public class MainActivity extends NavigationActivity {
 
 ios -> xcode에서 BundleIdentifier 수정
 aos -> com.youngbinapp --> com.chabiri.youngbinapp
+
+### font 설정 Ios
+
+https://juzero-space.tistory.com/257 [참고]
