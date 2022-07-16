@@ -19,3 +19,5 @@ aos -> com.youngbinapp --> com.chabiri.youngbinapp
 ### font 설정 Ios
 
 https://juzero-space.tistory.com/257 [참고]
+
+xcode에 폰트 폴더 등록할때 설정 잘해주기.
